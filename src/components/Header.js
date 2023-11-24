@@ -1,13 +1,12 @@
 import React from "react";
 
-function Header() {
+function Header({name,title}) {
     return (
         <div>
-            <h1>Header</h1>
-            <h1>Learning Code</h1>
+            <h1>{title}</h1>
+            <h1>{name}</h1>
             <p>This is header componet</p>
         </div>
-
     );
 }
 export default Header;
