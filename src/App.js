@@ -4,12 +4,15 @@ import './App.css';
 import { Button } from 'reactstrap';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
+// import Home from './components/Home';
 // import Header from './components/Header';
 
 function App() {
 
   const btnHandle = () => {
-    toast("this is my first message");
+    toast.success("done...",{
+      position:"top-center"
+    });
   }
 
   return (
