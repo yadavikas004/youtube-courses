@@ -7,7 +7,13 @@ import { ToastContainer } from 'react-toastify'; // here toast removed
 import Home from './components/Home';
 import Allcourses from './components/Allcourses';
 import Addcourse from './components/Addcourse';
-// import Header from './components/Header';
+import { Col, Container, Row } from 'reactstrap';
+import Header from './components/Header';
+import Menus from './components/Menu';
+import {
+  BrowserRouter as Router, Route, Routes
+} from "react-router-dom";
+
 
 function App() {
 
@@ -19,16 +25,29 @@ function App() {
 
   return (
     <div>
-      <ToastContainer />
-
-      <Home/>
+      <Router>
+        <ToastContainer />
+        <Container>
+          <Header />
+          <Row>
+            <Col md={4}>
+              <Menus />
+            </Col>
+            <Col md={8}>
+              <Routes>
+                <Route path='/' Component={Home} exact />
+                <Route path='/add-course' Component={Addcourse} exact />
+                <Route path='/view-course' Component={Allcourses} exact />
+              </Routes>
+            </Col>
+          </Row>
+        </Container>
+      </Router>
+      {/* <Home/>
 
       <Allcourses/>
 
-      <Addcourse/>
-      
-       {/* <h1>Application Started</h1> 
-       <Button outline color="primary" onClick={btnHandle}>First React Button</Button> */}
+      <Addcourse/> */}
 
     </div>
   );
