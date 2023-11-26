@@ -1,8 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Course from "./Course";
+// import { Button } from "reactstrap";
 
 const Allcourses = () => {
 
+    useEffect(() =>{
+        // alert("testing");
+        document.title = "All Courses";
+    },[]);
     const [courses] = useState([
         {title:"Java Course", description: "This is Java Learning Course"},
         {title:"Python Course", description: "This is Python Learning Course"},

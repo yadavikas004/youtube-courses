@@ -1,7 +1,12 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import { Button, Container, Form, FormGroup, Input } from "reactstrap";
 
 const Addcourse = () => {
+
+    useEffect(() =>{
+        // alert("testing");
+        document.title = "Add Course";
+    },[]);
 
     return (
         <Fragment>

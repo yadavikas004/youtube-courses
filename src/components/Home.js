@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container, Button } from "reactstrap";
 import { toast } from 'react-toastify';
 import '../App.css';
@@ -11,6 +11,11 @@ const Home = () => {
           position:"top-center"
         });
       }
+
+    useEffect(() =>{
+        // alert("testing");
+        document.title = "Home Page";
+    },[]);
 
     return (
         <div className=" align-items-center justify-content-center padding-10">
