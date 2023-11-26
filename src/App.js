@@ -5,7 +5,7 @@ import './App.css';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify'; // here toast removed
 import Home from './components/Home';
-import Course from './components/Course';
+import Allcourses from './components/Allcourses';
 // import Header from './components/Header';
 
 function App() {
@@ -20,9 +20,9 @@ function App() {
     <div>
       <ToastContainer />
       <Home/>
+      <Allcourses/>
       {/* <h1>Application Started</h1> */}
       {/* <Button outline color="primary" onClick={btnHandle}>First React Button</Button> */}
-      <Course  course={{title:"Java", description:"Java Learning"}}/>
     </div>
   );
 }
