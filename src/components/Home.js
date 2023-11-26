@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Button } from "reactstrap";
 import { toast } from 'react-toastify';
 import '../App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 
 const Home = () => {
@@ -12,17 +13,17 @@ const Home = () => {
       }
 
     return (
-        <div>
-            <div className="jumbotron">
+        <div className=" align-items-center justify-content-center padding-10">
+            <div className="jumbotron text-center">
                 <h1 className="display-4"> Start Coding With Fun</h1>
                 <p className="lead">This is developed by Me for learning purpose backend is on spring boot and frontend on reactjs</p>
                 <Container>
-                    <Button color="primary" onClick={btnHandle}>Start Using</Button>
+                    <Button outline color="primary" onClick={btnHandle}>Start Using</Button>
                 </Container>
-                <hr className="my-4" />
-                <p>
+                {/* <hr className="my-4" /> */}
+                {/* <p>
                     You can add more content or features here.
-                </p>
+                </p> */}
             </div>
 
         </div>

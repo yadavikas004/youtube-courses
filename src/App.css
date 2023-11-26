@@ -54,3 +54,9 @@
 .lead {
   font-size: 1.25rem; /* Customize the font size */
 }
+
+.button-container {
+  display: flex;
+  justify-content: space-between; /* Distribute space between buttons */
+  margin-top: 20px; /* Add top margin if needed */
+}
