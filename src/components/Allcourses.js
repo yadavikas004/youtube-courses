@@ -34,16 +34,20 @@ const Allcourses = () => {
         getAllCoursesFromServer(); // Call on component mount only
     }, []);
 
+    const updateCourses=(id) => {
+        setCourses(courses.filter((c)=>c.id !== id));
+    }
+
     return (
         <div>
             <h1 className="text-center">All Course</h1>
             <p className="text-center">List of courses are as follows</p>
             {courses.length > 0 ? (
                 courses.map((course) => (
-                    <Course key={course.id} course={course} />
+                    <Course key={course.id} course={course} update={updateCourses}/>
                 ))
             ) : (
-                <p>No courses</p>
+                <p className="text-center">No courses</p>
             )}
         </div>
     );

@@ -49,7 +49,9 @@ const Addcourse = () => {
             <h1 className="text-center my-3">Fill Course Detail</h1>
             <Form onSubmit={handleForm}>
                 <FormGroup>
-                    <label htmlFor="userId">Course Id</label>
+                    <label htmlFor="userId">
+                        Course Id<span style={{ color: "red" }}>*</span>
+                    </label>
                     <Input
                         type="text"
                         placeholder="Enter Here"
@@ -62,7 +64,9 @@ const Addcourse = () => {
                 </FormGroup>
 
                 <FormGroup>
-                    <label htmlFor="title">Course Title</label>
+                    <label htmlFor="title">
+                        Course Title<span style={{ color: "red" }}>*</span>
+                    </label>
                     <Input
                         type="text"
                         placeholder="Enter Title Here"
@@ -74,7 +78,9 @@ const Addcourse = () => {
                 </FormGroup>
 
                 <FormGroup>
-                    <label htmlFor="description">Course Description</label>
+                    <label htmlFor="description">
+                        Course Description<span style={{ color: "red" }}>*</span>
+                    </label>
                     <Input
                         type="textarea"
                         placeholder="Enter Description Here"
