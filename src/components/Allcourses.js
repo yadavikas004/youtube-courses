@@ -1,48 +1,38 @@
 import React, { useEffect, useState } from "react";
 import Course from "./Course";
-// import { Button } from "reactstrap";
 import BASE_URL from "../api/bootapi";
 import axios from "axios";
 import { toast } from "react-toastify";
 
 const Allcourses = () => {
-
     const [courses, setCourses] = useState([]);
 
     useEffect(() => {
-        // alert("testing");
         document.title = "All Courses";
     }, []);
 
-    //function to call url
+    // function to call url
     const getAllCoursesFromServer = () => {
         axios.get(`${BASE_URL}/courses`).then(
             (response) => {
-                // console.log(response);
                 console.log(response.data);
-                toast.success("course has been reloaded", {
+                toast.success("Courses have been reloaded", {
                     position: "bottom-center",
                 });
                 setCourses(response.data);
             },
             (error) => {
                 console.log(error);
-                toast.error("something went wrong", {
+                toast.error("Something went wrong while fetching courses", {
                     position: "bottom-center",
                 });
             }
-        )
-    }
+        );
+    };
 
     useEffect(() => {
-        getAllCoursesFromServer();
+        getAllCoursesFromServer(); // Call on component mount only
     }, []);
-
-    // const [courses] = useState([
-    //     {title:"Java Course", description: "This is Java Learning Course"},
-    //     {title:"Python Course", description: "This is Python Learning Course"},
-    //     {title:"Nodejs Course", description: "This is Nodejs Learning Course"}
-    // ])
 
     return (
         <div>
@@ -57,6 +47,6 @@ const Allcourses = () => {
             )}
         </div>
     );
-}
+};
 
 export default Allcourses;
